@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #8A2BE2, #FF69B4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 90%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.emoji-sequence {
+  font-size: 4rem;
+  margin: 30px 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#guess-input {
+  padding: 20px;
+  font-size: 1.5rem;
+  width: 80%;
+  margin: 20px 0;
+  border: none;
+  border-radius: 12px;
+  background: #fff;
+  color: #333;
+  outline: none;
+}
+
+#guess-input:focus {
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+}
+
+.btn {
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  background: #8A2BE2;
+  color: #fff;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  margin: 10px 0;
+}
+
+.btn:hover {
+  background: #7B1FA2;
+  transform: scale(1.05);
+}
+
+.next-round {
+  display: none;
+}
+
+.result {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.score {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+/* Party Animation */
+@keyframes party {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 0; }
+}
+
+.party-popper {
+  font-size: 3rem;
+  animation: party 1.5s ease-out;
+}
